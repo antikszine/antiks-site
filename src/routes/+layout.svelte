@@ -12,14 +12,14 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>{page?.data?.post?.title || 'My Retro Forum'}</title>
+	<title>{page?.data?.post?.title || 'michael'}</title>
 </svelte:head>
 
 <FirebaseApp {auth} {firestore}>
 	<!-- Navbar -->
 	<nav class="navbar">
 		<!-- Brand -->
-		<a href="/" class="brand">MyForum</a>
+		<a href="/" class="brand">michael</a>
 
 		<!-- Center links -->
 		<div class="nav-links">
