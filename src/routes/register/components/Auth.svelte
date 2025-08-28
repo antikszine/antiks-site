@@ -4,15 +4,15 @@
     import { goto } from '$app/navigation';
 
     let username = $state('');
+    let userImage = $state('');
     let email = $state('');
     let password = $state('');
     let passwordCheck = $state('');
-    let errorMessage: string = $state('');
 
     const registerWithEmailAndPassword = async (email: string,password: string) => {
             try {
                 await createUserWithEmailAndPassword(auth, email, password)
-                .then((result => {return updateProfile(result.user,{displayName: username})}))
+                .then((result => {return updateProfile(result.user,{displayName: username, photoURL: userImage})}))
                 goto('/');
                 console.log('Successfully created user');
             } catch (error) {
@@ -30,6 +30,7 @@
     <br>
     <input placeholder="confirm password" type="password" bind:value={passwordCheck}/>
     <br>
+    <input type="file" accept="image/png " bind:value={userImage}/>
     {#if password != passwordCheck && password != ''}
         <p style="color:red;">passwords do not match.</p>
         <button disabled>Sign Up!</button>
@@ -39,6 +40,6 @@
     {:else if username == '' || email == '' || password == ''}
         <button disabled>Sign Up!</button>
     {:else}
-        <button onclick={() => {registerWithEmailAndPassword(email, password)}}>Sign Up!</button>
+        <button onclick={() => {registerWithEmailAndPassword(email, password); console.log(userImage)}}>Sign Up!</button>
     {/if}
 </form>

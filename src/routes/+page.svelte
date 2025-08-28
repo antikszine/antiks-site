@@ -5,6 +5,7 @@
 
     import { userStore, SignedIn, SignedOut } from 'sveltefire';
 
+
 	let { data }: PageProps = $props();
     let visible = $state(false);
 
@@ -16,13 +17,6 @@
 </SignedOut>
 <SignedIn>
     <h1>welcome, {$user?.displayName},</h1>
+    <img src={$user?.photoURL} alt="{$user?.displayName}'s profile image"/>
     <p>to the pinnacle of humanity.</p>
 </SignedIn>
-
-<style>
-    * {
-        text-align: center;
-        font-family:'Comic Sans MS';
-        color:#222222;
-    }
-</style>
