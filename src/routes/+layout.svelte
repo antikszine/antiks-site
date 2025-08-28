@@ -2,8 +2,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/state';
 
-	import { auth } from '$lib/firebase';
-	import { firestore } from '$lib/firebase';
+	import { auth, firestore } from '$lib/firebase';
 
 	import { FirebaseApp, SignedIn, SignedOut } from 'sveltefire';
 	import { signOut } from 'firebase/auth';
@@ -36,7 +35,7 @@
 			</SignedOut>
 			<SignedIn>
 				<a href="/profile">Profile</a>
-				<button class="signout" on:click={() => signOut(auth)}>Sign Out</button>
+				<button class="signout" onclick={() => signOut(auth)}>Sign Out</button>
 			</SignedIn>
 		</div>
 	</nav>
