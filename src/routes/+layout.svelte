@@ -33,9 +33,67 @@
 </FirebaseApp>
 
 <style>
-    :global(h1,h2,h3,h4,h5,h6,p) {
-        text-align: center;
-        font-family:'Comic Sans MS';
-        color:#222222;
-    }
+/* Navbar container */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #2a2a40; /* dark purple/blue */
+	padding: 0.75rem 1.5rem;
+	font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Links shared styles */
+.navbar a {
+	color: #fff;
+	text-decoration: none;
+	margin: 0 0.5rem;
+	padding: 0.4rem 0.6rem;
+	border-radius: 6px;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+.navbar a:hover {
+	background: #444466;
+}
+
+/* Brand/home link */
+.navbar .brand {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: #ffd369; /* a bright accent */
+}
+
+/* Right side container */
+.nav-right {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* Signup link stands out */
+.signup {
+	background: #ffd369;
+	color: #000 !important;
+	font-weight: bold;
+}
+.signup:hover {
+	background: #ffbf00;
+}
+
+/* Sign out button styled like link */
+.signout {
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 0.3rem 0.7rem;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+.signout:hover {
+	background: #fff;
+	color: #2a2a40;
+}
 </style>
