@@ -6,33 +6,64 @@
 	import { firestore } from '$lib/firebase';
 
 	import { FirebaseApp, SignedIn, SignedOut } from 'sveltefire';
-    import { signOut } from 'firebase/auth';
+	import { signOut } from 'firebase/auth';
 
 	let { children } = $props();
-
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>{page.data.post.title}</title>
+	<title>{page?.data?.post?.title || 'My Retro Forum'}</title>
 </svelte:head>
 
 <FirebaseApp {auth} {firestore}>
-	<nav style="text-align:center; font-family:'Comic Sans MS';">
-		<a href="./">Home</a> | <a href="/forum">Forum</a> 
-		<SignedOut>
-			| <a href="/login">Sign In</a>/<a href="/register">Sign Up</a>
-		</SignedOut>
-		<SignedIn>
-			| <a href="/profile">Profile</a>
-			<br>
-			<button onclick={() => {signOut(auth)}}>Sign Out</button>
-		</SignedIn>
+	<!-- Navbar -->
+	<nav class="navbar">
+		<!-- Brand -->
+		<a href="/" class="brand">MyForum</a>
+
+		<!-- Center links -->
+		<div class="nav-links">
+			<a href="/">Home</a>
+			<a href="/forum">Forum</a>
+		</div>
+
+		<!-- Auth -->
+		<div class="nav-right">
+			<SignedOut>
+				<a href="/login">Sign In</a>
+				<a href="/register" class="signup">Sign Up</a>
+			</SignedOut>
+			<SignedIn>
+				<a href="/profile">Profile</a>
+				<button class="signout" on:click={() => signOut(auth)}>Sign Out</button>
+			</SignedIn>
+		</div>
 	</nav>
-	{@render children?.()}
+
+	<!-- Page container -->
+	<div class="page-container">
+		<main class="content-box">
+			{@render children?.()}
+		</main>
+	</div>
 </FirebaseApp>
 
 <style>
+/* Background stripes like old forums */
+:global(body) {
+	margin: 0;
+	font-family: 'Comic Sans MS', sans-serif;
+	background: repeating-linear-gradient(
+		45deg,
+		#e0e0e0,
+		#e0e0e0 20px,
+		#f8f8f8 20px,
+		#f8f8f8 40px
+	);
+	color: #222;
+}
+
 /* Navbar container */
 .navbar {
 	display: flex;
@@ -40,29 +71,30 @@
 	align-items: center;
 	background: #2a2a40; /* dark purple/blue */
 	padding: 0.75rem 1.5rem;
-	font-family: 'Comic Sans MS', sans-serif;
-}
-
-/* Links shared styles */
-.navbar a {
-	color: #fff;
-	text-decoration: none;
-	margin: 0 0.5rem;
-	padding: 0.4rem 0.6rem;
-	border-radius: 6px;
-	transition: background 0.2s ease, color 0.2s ease;
-}
-
-/* Hover effect */
-.navbar a:hover {
-	background: #444466;
 }
 
 /* Brand/home link */
 .navbar .brand {
 	font-weight: bold;
 	font-size: 1.2rem;
-	color: #ffd369; /* a bright accent */
+	color: #ffd369; /* retro accent */
+	text-decoration: none;
+}
+
+/* Center links */
+.nav-links {
+	display: flex;
+	gap: 0.75rem;
+}
+.navbar a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.4rem 0.6rem;
+	border-radius: 6px;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+.navbar a:hover {
+	background: #444466;
 }
 
 /* Right side container */
@@ -95,5 +127,22 @@
 .signout:hover {
 	background: #fff;
 	color: #2a2a40;
+}
+
+/* Page container */
+.page-container {
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+}
+
+/* Content box (centered forum-style) */
+.content-box {
+	background: #fff;
+	border: 2px solid #999;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 960px; /* forum width */
+	padding: 2rem;
 }
 </style>
