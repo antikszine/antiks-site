@@ -2,7 +2,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/state';
 
-	import { auth, firestore } from '$lib/firebase';
+	import { auth, firestore, storage } from '$lib/firebase';
 
 	import { FirebaseApp, SignedIn, SignedOut } from 'sveltefire';
 	import { signOut } from 'firebase/auth';
@@ -15,7 +15,7 @@
 	<title>{page?.data?.post?.title || 'michael'}</title>
 </svelte:head>
 
-<FirebaseApp {auth} {firestore}>
+<FirebaseApp {auth} {firestore} {storage}>
 	<!-- Navbar -->
 	<nav class="navbar">
 		<!-- Brand -->

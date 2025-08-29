@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
+import { getStorage } from "firebase/storage";
 
 const config = {
 	apiKey: "AIzaSyCAF_M8CF5CNEY_8a7aBYc_1p6n1c173-I",
@@ -14,6 +15,7 @@ const config = {
 export const app = initializeApp(config);
 export const firestore = getFirestore(app);
 export const auth = getAuth(app);
+export const storage = getStorage(app);
 
 auth.onAuthStateChanged(auth => {
     if (auth) {
