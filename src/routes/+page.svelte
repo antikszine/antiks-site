@@ -18,5 +18,5 @@
 <SignedIn>
     <h1>welcome, {$user?.displayName},</h1>
     <img src={$user?.photoURL} alt="{$user?.displayName}'s profile image"/>
-    <p>to the pinnacle of humanity.</p>
+    <p>your signal has been etched into the archive.</p>
 </SignedIn>
