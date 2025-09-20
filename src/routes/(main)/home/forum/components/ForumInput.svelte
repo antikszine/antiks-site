@@ -11,7 +11,7 @@
 
     async function saveToFirestore(){
         addDoc(postCollection.ref as CollectionReference, {
-            date: serverTimestamp() as unknown as string,
+            date: serverTimestamp(),
             owner: $user?.displayName, 
             userImage: $user?.photoURL,
             title: title, 

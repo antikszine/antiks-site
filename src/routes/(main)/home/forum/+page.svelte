@@ -5,7 +5,7 @@
 
     import { collectionStore, Collection } from 'sveltefire';
 
-	import type { PageProps } from './$types';
+	import type { PageProps } from '../../forum/$types';
     import type { CollectionReference } from 'firebase/firestore';
 	let { data }: PageProps = $props();
 
