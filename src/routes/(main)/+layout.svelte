@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Mascot from '$lib/components/mascot.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/state';
 
@@ -41,6 +42,7 @@
 		<main class="content">
 			{@render children?.()}
 		</main>
+		<Mascot imgSrc="/literate.png" />
 	</div>
 </FirebaseApp>
 
