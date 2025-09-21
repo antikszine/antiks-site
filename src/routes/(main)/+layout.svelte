@@ -3,7 +3,6 @@
 	import { page } from '$app/state';
 
 	import { auth, firestore, storage } from '$lib/firebase';
-
 	import { FirebaseApp, SignedIn, SignedOut } from 'sveltefire';
 	import { signOut } from 'firebase/auth';
 
@@ -16,37 +15,88 @@
 </svelte:head>
 
 <FirebaseApp {auth} {firestore} {storage}>
-	<!-- Navbar -->
-	<nav class="navbar">
-		<!-- Brand -->
-		<a href="/landingpage" class="brand">antiks</a>
+	<div class="layout">
 
-		<!-- Center links -->
-		<div class="nav-links">
-			<a href="/home">about</a>
-			<a href="/home/forum">forum</a>
-			<a href="/home/forum">stockpile</a>
-		</div>
+		<aside class="sidebar">
+			<a href="/landingpage" class="brand">antikszine</a>
 
-		<!-- Auth -->
-		<div class="nav-right">
-			<SignedOut>
-				<a href="/home/login">Sign In</a>
-				<a href="/home/register" class="signup">Sign Up</a>
-			</SignedOut>
-			<SignedIn>
-				<a href="/home/profile">Profile</a>
-				<button class="signout" onclick={() => signOut(auth)}>Sign Out</button>
-			</SignedIn>
-		</div>
-	</nav>
+			<nav class="links">
+				<a href="/home">about</a>
+				<a href="/home/forum">forum</a>
+				<a href="/home/stockpile">stockpile</a>
+			</nav>
 
-	<!-- Page container -->
-	<div class="page-container">
-		<main class="content-box">
+			<div class="auth">
+				<SignedOut>
+					<a href="/home/login">Sign In</a>
+					<a href="/home/register">Sign Up</a>
+				</SignedOut>
+				<SignedIn>
+					<a href="/home/profile">Profile</a>
+					<button on:click={() => signOut(auth)}>Sign Out</button>
+				</SignedIn>
+			</div>
+		</aside>
+
+		<main class="content">
 			{@render children?.()}
 		</main>
 	</div>
 </FirebaseApp>
 
+<style>
+	.layout {
+		display: flex;
+		min-height: 100vh;
+		font-family: system-ui, sans-serif;
+	}
+
+	.sidebar {
+		width: 200px;
+		background: #ffffff;
+		color: #000000;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.brand {
+		color: #e692ff;
+		font-weight: 600;
+		text-decoration: none;
+		font-size: 1.1rem;
+	}
+
+	.links,
+	.auth {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.sidebar a,
+	.sidebar button {
+		color: #000000;
+		text-decoration: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-size: 0.95rem;
+		text-align: left;
+	}
+
+	.sidebar a:hover,
+	.sidebar button:hover {
+		color: #ff4081;
+	}
+
+	.content {
+		flex: 1;
+		padding: 1.5rem;
+		background: #fafafa;
+		color: #111;
+		overflow-y: auto;
+	}
+</style>
 
