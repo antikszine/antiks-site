@@ -47,10 +47,17 @@
 </FirebaseApp>
 
 <style>
+	@font-face {
+		font-family: "CourierPixel";
+		src: url("/fonts/courier-pixel-monospaced.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
+
 	.layout {
 		display: flex;
 		min-height: 100vh;
-		font-family: system-ui, sans-serif;
+		font-family: "CourierPixel", system-ui, sans-serif;
 	}
 
 	.sidebar {
@@ -61,6 +68,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		font-family: "CourierPixel", monospace;
 	}
 
 	.brand {
@@ -86,6 +94,7 @@
 		cursor: pointer;
 		font-size: 0.95rem;
 		text-align: left;
+		font-family: "CourierPixel", monospace;
 	}
 
 	.sidebar a:hover,
@@ -99,6 +108,8 @@
 		background: #fafafa;
 		color: #111;
 		overflow-y: auto;
+		font-family: "CourierPixel", monospace;
 	}
 </style>
+
 
