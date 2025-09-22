@@ -1,5 +1,15 @@
 <script lang="ts">
-  export let imgSrc = "/literate.png";
+    import { onMount } from "svelte";
+
+    export let imgSrc: String;
+
+
+  onMount(() => {
+    //randomize image number on page load
+
+    const randomValue = Math.round(Math.random());
+    imgSrc = `/minerva/${randomValue}.png`;
+  });
 
   const messages = [
     "hiiii ehehe~",
