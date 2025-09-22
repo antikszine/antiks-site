@@ -19,7 +19,7 @@
 	<div class="layout">
 
 		<aside class="sidebar">
-			<a href="/landingpage" class="brand">antikszine</a>
+			<a>antikszine</a>
 
 			<nav class="links">
 				<a href="/home">about</a>
