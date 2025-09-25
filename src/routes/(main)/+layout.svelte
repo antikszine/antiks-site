@@ -42,7 +42,7 @@
 		<main class="content">
 			{@render children?.()}
 		</main>
-		<Mascot imgSrc="/literate.png" />
+		<Mascot imgSrc="/sketchyminerva1.png" />
 	</div>
 </FirebaseApp>
 
