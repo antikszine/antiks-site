@@ -19,10 +19,11 @@
 	<div class="layout">
 
 		<aside class="sidebar">
-			<a>antikszine</a>
+			<a href="/home">antikszine</a>
 
 			<nav class="links">
-				<a href="/home">about</a>
+				<a href="/home/about">about</a>
+				<a href="/home/digest">digest</a>
 				<a href="/home/forum">forum</a>
 				<a href="/home/stockpile">stockpile</a>
 			</nav>
@@ -34,7 +35,7 @@
 				</SignedOut>
 				<SignedIn>
 					<a href="/home/profile">Profile</a>
-					<button on:click={() => signOut(auth)}>Sign Out</button>
+					<button onclick={() => signOut(auth)}>Sign Out</button>
 				</SignedIn>
 			</div>
 		</aside>

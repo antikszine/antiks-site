@@ -1,17 +1,13 @@
 <script lang="ts">
     import ForumInput from './components/ForumInput.svelte';
     import ForumListing from './components/ForumListing.svelte';
-    import { firestore } from '$lib/firebase';
+    import { firestore } from '$lib/firebase.js';
 
     import { collectionStore, Collection } from 'sveltefire';
 
-	import type { PageProps } from '../../forum/$types';
-    import type { CollectionReference } from 'firebase/firestore';
-	let { data }: PageProps = $props();
-
-    let postCollection: CollectionReference = collectionStore(firestore, 'forum-posts') as unknown as CollectionReference;
+    const posts = collectionStore(firestore, 'forum-posts');
 </script>
-<!-- TODO: why does lilith's post not show up in most recent? -->
+<!-- TODO: find out how to sort posts (potentially rebuild framework) -->
 
 
 <h1>Forum Posts</h1>

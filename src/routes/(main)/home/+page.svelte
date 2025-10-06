@@ -1,13 +1,7 @@
 <script lang="ts">
     import { auth } from '$lib/firebase';
 
-	import type { PageProps } from './$types';
-
     import { userStore, SignedIn, SignedOut } from 'sveltefire';
-
-
-	let { data }: PageProps = $props();
-    let visible = $state(false);
 
     const user = userStore(auth);
 </script>

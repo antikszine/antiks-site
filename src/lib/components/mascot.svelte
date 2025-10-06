@@ -5,9 +5,10 @@
 
 
   onMount(() => {
-    //randomize image number on page load
-    const randomValue = Math.round(Math.random());
-    imgSrc = `/minerva/${randomValue}.png`;
+    //randomize image on page load
+    const fileNames = import.meta.glob('/src/lib/assets/minerva/*.png');
+    const randomValue = Math.floor(Math.random() * Object.entries(fileNames).length);
+    imgSrc = `${Object.entries(fileNames)[randomValue][0]}`;
   });
 
   const messages = [
@@ -34,9 +35,9 @@
   }
 </script>
 
-<div class="mascot" on:click={sayRandom}>
+<div class="mascot" onclick={sayRandom} onkeydown={sayRandom}>
   {#if show}
-    <div class="bubble fade" on:animationend={handleAnimationEnd}>
+    <div class="bubble fade" onanimationend={handleAnimationEnd}>
       {@html current}
       <span class="tail"></span>
     </div>
