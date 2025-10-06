@@ -1,12 +1,11 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    export let imgSrc: String;
+    export let imgSrc: string;
 
 
   onMount(() => {
     //randomize image number on page load
-
     const randomValue = Math.round(Math.random());
     imgSrc = `/minerva/${randomValue}.png`;
   });

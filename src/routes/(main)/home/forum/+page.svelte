@@ -11,6 +11,8 @@
 
     let postCollection: CollectionReference = collectionStore(firestore, 'forum-posts') as unknown as CollectionReference;
 </script>
+<!-- TODO: why does lilith's post not show up in most recent? -->
+
 
 <h1>Forum Posts</h1>
 
