@@ -1,7 +1,24 @@
 <script lang="ts">
+    import DigestPost from "./components/DigestPost.svelte";
+    import { firestore } from '$lib/firebase.js';
 
+    import { collection, query, orderBy } from 'firebase/firestore';
+    import { collectionStore } from 'sveltefire';
+
+    const posts = collection(firestore, 'digest-posts');
+    const q = query(posts, orderBy('date','desc'));
+    const sortedPosts = collectionStore(firestore, q);
+
+    function getDate(d: Date){
+        return d.toLocaleDateString() + ' at ' + d.toLocaleTimeString();
+    }
 </script>
 
-<h1>we're still working on this one</h1>
-<img src="https://media1.tenor.com/m/1l9R9y3_WIkAAAAC/jack-hammer-construction-worker.gif" alt="under construction :3">
-<p>how did you even get here</p>
+<h1>antiks' digest</h1>
+{#each $sortedPosts as post}
+<DigestPost 
+    title={post.title}
+    author={post.author}
+    content={post.content}
+    date={getDate(new Date(post.date.toDate()))} />
+{/each}
