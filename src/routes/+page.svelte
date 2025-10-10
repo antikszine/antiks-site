@@ -17,32 +17,33 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #111;
+    background: url("/Background.gif") no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
-    font-family: sans-serif;
+    font-family: "CourierPixel", sans-serif;
     text-align: center;
   }
 
   img {
-  width: 350px;
-  height: auto;
-  border-radius: 1rem; /* or 50% for circle */
-  margin-bottom: 2rem;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)); /* soft white glow */
-}
+    width: 350px;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+  }
 
-  button {
+  .guest-link {
     padding: 0.8rem 1.5rem;
-    border: none;
     border-radius: 0.5rem;
     background: white;
     color: black;
     font-size: 1.1rem;
-    cursor: pointer;
+    text-decoration: none;
     transition: background 0.3s ease;
   }
 
-  button:hover {
+  .guest-link:hover {
     background: #ccc;
   }
 </style>
+
