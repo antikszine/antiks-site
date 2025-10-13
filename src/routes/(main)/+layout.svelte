@@ -49,8 +49,8 @@
 
 <style>
 	@font-face {
-		font-family: "CourierPixel";
-		src: url("/fonts/courier-pixel-monospaced.ttf") format("truetype");
+		font-family: "Inconsolata";
+		src: url("/fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("truetype");
 		font-weight: normal;
 		font-style: normal;
 	}
@@ -69,7 +69,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		font-family: "CourierPixel", monospace;
+		font-family: "Inconsolata", monospace;
 	}
 
 	.brand {

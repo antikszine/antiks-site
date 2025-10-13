@@ -20,7 +20,7 @@
     background: url("/Background.gif") no-repeat center center fixed;
     background-size: cover;
     color: #fff;
-    font-family: "CourierPixel", sans-serif;
+    font-family: "Inconsolata", monospace;
     text-align: center;
   }
 
