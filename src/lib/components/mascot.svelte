@@ -9,6 +9,7 @@
     const fileNames = import.meta.glob('/src/lib/assets/minerva/*.png');
     const randomValue = Math.floor(Math.random() * Object.entries(fileNames).length);
     imgSrc = `${Object.entries(fileNames)[randomValue][0]}`;
+    show = true;
   });
 
   const messages = [
@@ -19,7 +20,7 @@
     "click me again, i love it when u do that"
   ];
 
-  let current = "hi, i'm literate";
+  let current = "welcome to antiks :3";
   let show = false;
 
   function sayRandom() {
@@ -35,7 +36,7 @@
   }
 </script>
 
-<div class="mascot" onclick={sayRandom} onkeydown={sayRandom}>
+<button class="mascot" onclick={sayRandom}>
   {#if show}
     <div class="bubble fade" onanimationend={handleAnimationEnd}>
       {@html current}
@@ -43,7 +44,7 @@
     </div>
   {/if}
   <img src={imgSrc} alt="mascot" />
-</div>
+</button>
 
 <style>
   .mascot {
@@ -57,6 +58,8 @@
     justify-content: center;
     align-items: flex-end;
     z-index: 1000;
+    background: transparent;
+    border:0;
   }
 
   .mascot img {

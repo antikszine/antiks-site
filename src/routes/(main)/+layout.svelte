@@ -58,7 +58,7 @@
 	.layout {
 		display: flex;
 		min-height: 100vh;
-		font-family: "CourierPixel", system-ui, sans-serif;
+		font-family: "CourierPixel", monospace;
 	}
 
 	.sidebar {

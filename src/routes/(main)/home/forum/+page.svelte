@@ -16,7 +16,13 @@
     }
 </script>
 
-<h1>Forum Posts</h1>
+<h1>Forum</h1>
+<!--TODO
+    allow post editing
+    allow post deletion
+    set up admin role
+    comments-->
+
 
 <ForumInput></ForumInput>
 
@@ -26,14 +32,12 @@
         date="{getDate(new Date(post.date.toDate()))}" 
         title="{post.title}"
         username="{post.owner}"
-        userImage="{post.userImage}" 
         post="{post.content}" 
         signature="{post.signature}"/>
 {/each}
 <style>
-    * {
+    h1 {
         text-align: center;
-        font-family:'Comic Sans MS';
         color:#222222;
     }
 </style>
