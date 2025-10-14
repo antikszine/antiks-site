@@ -25,7 +25,8 @@
 				<a href="/home/about">manifesto</a>
 				<a href="/home/digest">digest</a>
 				<a href="/home/forum">forum</a>
-				<a href="/home/stockpile">stockpile</a>
+				<a href="/home/stockpile">stockpile (works)</a>
+				<a href="/home/resources">resources (links)</a>
 				<a href="/home/webring">webring</a>
 			</nav>
 

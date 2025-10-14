@@ -1,0 +1,20 @@
+[
+    {
+      "title": "antiks flyer I",
+      "date": "2025-10-31",
+      "type": "flyer",
+      "thumb": "/uploads/putflyerhere.png",
+      "file": "/uploads/blahblah.png",
+      "tags": ["print", "digital"]
+    },
+    {
+      "title": "antiks flyer II",
+      "date": "2025-10-20",
+      "type": "flyer",
+      "thumb": "/uploads/antiks-flyer.jpg",
+      "file": "/uploads/antiks-flyer.jpg",
+      "tags": ["show"]
+    }
+  ]
+// you can upload whatever to the archive under the /uploads folder under the static folder
+  
