@@ -1,5 +1,8 @@
 <script>
     import { onMount } from 'svelte';
+    /**
+     * @type {any[] | null | undefined}
+     */
     let items = [];
   
     onMount(async () => {

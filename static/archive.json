@@ -1,20 +1,12 @@
 [
     {
-      "title": "antiks flyer I",
+      "title": "midge landing page",
       "date": "2025-10-31",
-      "type": "flyer",
-      "thumb": "/uploads/putflyerhere.png",
-      "file": "/uploads/blahblah.png",
+      "type": "asset",
+      "thumb": "/uploads/LitMinerva2sketchy.png",
+      "file": "/uploads/LitMinerva2sketchy.png",
       "tags": ["print", "digital"]
-    },
-    {
-      "title": "antiks flyer II",
-      "date": "2025-10-20",
-      "type": "flyer",
-      "thumb": "/uploads/antiks-flyer.jpg",
-      "file": "/uploads/antiks-flyer.jpg",
-      "tags": ["show"]
     }
   ]
-// you can upload whatever to the archive under the /uploads folder under the static folder
+
   
