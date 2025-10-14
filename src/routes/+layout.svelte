@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>{page?.data?.post?.title || 'michael'}</title>
+	<title>{page?.data?.post?.title || 'antikszine'}</title>
 </svelte:head>
 
 <!-- default layout, only renders its children -->
