@@ -22,10 +22,11 @@
 			<a href="/home">antikszine</a>
 
 			<nav class="links">
-				<a href="/home/about">about</a>
+				<a href="/home/about">manifesto</a>
 				<a href="/home/digest">digest</a>
 				<a href="/home/forum">forum</a>
 				<a href="/home/stockpile">stockpile</a>
+				<a href="/home/webring">webring</a>
 			</nav>
 
 			<div class="auth">
@@ -58,7 +59,7 @@
 	.layout {
 		display: flex;
 		min-height: 100vh;
-		font-family: "CourierPixel", monospace;
+		font-family: "Inconsolata", monospace;
 	}
 
 	.sidebar {

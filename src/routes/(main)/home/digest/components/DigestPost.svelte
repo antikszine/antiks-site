@@ -16,9 +16,8 @@
 
 <style>
     section {
-        width:80%; 
+        width:90%; 
         margin:auto; 
-        box-shadow:5px 10px 10px #888888;
     }
     h1 {
         margin:0;

@@ -7,7 +7,7 @@
 </script>
 
 <section class="about-page">
-	<h1>About Us</h1>
+	<h1>antikszine manifesto - as of 10.13.25</h1>
 
 	{#each paragraphs as para}
 		<p>{para}</p>
