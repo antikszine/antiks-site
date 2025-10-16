@@ -18,6 +18,12 @@ export const load: PageLoad = async () => {
 			desc: 'homeroom, intercoms, and broadcasting'
 		
 		},
+		{	
+			name: 'Central On Air',
+			url: 'https://centralonair.com/',
+			desc: 'community radio in cambridge, MA'
+		
+		},
 		// (template for future entries)
         //{
 		// 	name: 'blah blah',
