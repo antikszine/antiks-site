@@ -4,7 +4,7 @@
 </script>
 
 <main>
-  <img src="/LitMinerva2sketchy.png" alt="Landing Logo" />
+  <img src="/wobble midge.gif" alt="Landing Logo" />
   <button on:click={openModal}>Continue as Guest</button>
 </main>
 
@@ -25,7 +25,7 @@
   }
 
   img {
-    width: 350px;
+    width: 500px;
     height: auto;
     border-radius: 1rem;
     margin-bottom: 2rem;
@@ -33,7 +33,7 @@
   }
 
   .guest-link {
-    padding: 0.8rem 1.5rem;
+    padding: 1.8rem 1.5rem;
     border-radius: 0.5rem;
     background: white;
     color: black;

@@ -18,6 +18,9 @@
     "sometimes chat forums scare me a lot more than they should.",
     "drink ur water or ill find you.",
     "click me again, i love it when u do that"
+    "have you read the jotakak horse doujinshi yet?",
+    "i hope ur having a nice day :3",
+    "say thank you to lauren, mike, naomi, jess-- just go to the member's page already."
   ];
 
   let current = "welcome to antiks :3";

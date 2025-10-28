@@ -11,10 +11,10 @@
 {#if $showModal}
   <div class="overlay">
     <div class="dialog">
-      <p>"lots of identity crisis and internet behavior in here, do you still want in?”</p>
+      <p>"Discussions of identity and the depths of the internet take place here - do you still want in?”</p>
       <div class="actions">
-        <button on:click={enterSite}>yea</button>
-        <button on:click={closeModal}>i'm good</button>
+        <button on:click={enterSite}>YES</button>
+        <button on:click={closeModal}>I'M GOOD</button>
       </div>
     </div>
   </div>
