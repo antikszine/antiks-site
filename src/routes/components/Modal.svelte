@@ -22,20 +22,20 @@
 
 <style>
   .overlay {
-    z-index:10000;
-    position: fixed;
+    z-index:10;
+    position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-family: sans-serif;
+    font-family: "Inconsolata", monospace;
   }
 
   .dialog {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
   }
 

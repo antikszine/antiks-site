@@ -12,7 +12,6 @@
 <Modal />
 
 <style>
-
   :global(body) {
     margin:0;
     padding:0;
@@ -58,11 +57,6 @@
       background-size: cover;       
       background-attachment: scroll; 
       padding: 0.5rem;
-    }
-
-    img {
-      width: 80vw; 
-      margin-bottom: 1.5rem;
     }
   }
 </style>

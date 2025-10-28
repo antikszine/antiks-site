@@ -42,7 +42,7 @@
 		text-align: center;
 		padding: 3rem 1rem;
 		min-height: 100vh;
-		font-family: "CourierPixel", monospace;
+		font-family: "IBM Plex Mono", monospace;
 		background: #fafafa;
 		color: #111;
 	}
