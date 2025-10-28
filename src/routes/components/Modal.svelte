@@ -14,7 +14,7 @@
       <p>"Discussions of identity and the depths of the internet take place here - do you still want in?”</p>
       <div class="actions">
         <button on:click={enterSite}>YES</button>
-        <button on:click={closeModal}>I'M GOOD</button>
+        <button on:click={closeModal}>NO</button>
       </div>
     </div>
   </div>
@@ -22,6 +22,7 @@
 
 <style>
   .overlay {
+    z-index:10000;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);

@@ -4,53 +4,56 @@
 </script>
 
 <main>
-  <img src="/wobble midge.gif" alt="Landing Logo" />
+  <img src="/Background.gif" class="background" alt="Background" />
+  <img src="/wobble midge.gif" class="midge" alt="Landing Logo" />
   <button on:click={openModal}>Continue as Guest</button>
 </main>
 
 <Modal />
 
 <style>
+
+  :global(body) {
+    margin:0;
+    padding:0;
+  }
+
   main {
+    position:absolute;
+    width:100%;
+    height:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url("/Background.gif") no-repeat center center fixed;
-    background-size: contain;
-    color: #fff;
     font-family: "Inconsolata", monospace;
-    text-align: center;
+    padding:0;
   }
 
-  img {
+  .background{
+    width:100%;
+    height:100%;
+    position:absolute;
+  }
+
+  .midge {
     width: 500px;
     height: auto;
+    z-index: 9;
     border-radius: 1rem;
     margin-bottom: 2rem;
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
   }
 
-  .guest-link {
-    padding: 1.8rem 1.5rem;
-    border-radius: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-
-  .guest-link:hover {
-    background: #ccc;
+  button {
+    z-index:9;
   }
 
   :root {
   --padding: 1rem;
-}
-/* phone stuff */
-  @media (max-width: 768px) {
+  }
+/* mobile formatting */
+  @media (max-width: 600px) {
     main {
       background-size: cover;       
       background-attachment: scroll; 
@@ -60,11 +63,6 @@
     img {
       width: 80vw; 
       margin-bottom: 1.5rem;
-    }
-
-    .guest-link {
-      padding: 1.2rem 1rem;
-      font-size: 1rem;
     }
   }
 </style>
