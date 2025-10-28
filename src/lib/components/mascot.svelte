@@ -23,6 +23,7 @@
     "say thank you to lauren, mike, naomi, jess-- just go to the member's page already.",
     "my boss makes me feel the same way a good yaoi does.",
     "i need to feed my cat!",
+    "have you guys seen my cat?",
   ];
 
   let current = "welcome to antiks :3";

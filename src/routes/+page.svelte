@@ -18,7 +18,7 @@
     align-items: center;
     height: 100vh;
     background: url("/Background.gif") no-repeat center center fixed;
-    background-size: cover;
+    background-size: contain;
     color: #fff;
     font-family: "Inconsolata", monospace;
     text-align: center;
@@ -44,6 +44,28 @@
 
   .guest-link:hover {
     background: #ccc;
+  }
+
+  :root {
+  --padding: 1rem;
+}
+/* phone stuff */
+  @media (max-width: 768px) {
+    main {
+      background-size: cover;       
+      background-attachment: scroll; 
+      padding: 0.5rem;
+    }
+
+    img {
+      width: 80vw; 
+      margin-bottom: 1.5rem;
+    }
+
+    .guest-link {
+      padding: 1.2rem 1rem;
+      font-size: 1rem;
+    }
   }
 </style>
 
