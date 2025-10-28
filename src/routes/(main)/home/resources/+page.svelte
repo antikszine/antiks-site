@@ -1,12 +1,12 @@
 <script>
-  import resources from '$lib/resources.json'; // JSON import works in SvelteKit
+  import resources from '$lib/assets/resources.json'; // JSON import works in SvelteKit
 </script>
   <h1>resources & links</h1>
 <main>
 
   <ul>
-    {#each resources as r}
-      <li><a href={r.url} target="_blank" rel="noopener noreferrer">{r.name}</a></li>
+    {#each resources as res}
+      <li><a href={res.url} target="_blank" rel="noopener noreferrer">{res.name}</a></li>
     {/each}
   </ul>
 </main>
@@ -30,6 +30,7 @@
   }
 
   h1 {
+    text-align:center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }

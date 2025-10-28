@@ -18,11 +18,25 @@
         }
     };
 </script>
-
-<form style="width:50%; margin:0;">
+<form>
     <input placeholder="email" type="text" bind:value={email}/>
     <br>
     <input placeholder="password" type="password" bind:value={password}/>
     <br>
-    <button onclick={() => {loginWithEmailPassword(email, password)}}>AHHHHH</button>
+    <button onclick={() => {loginWithEmailPassword(email, password)}}>Sign In</button>
 </form>
+
+<style>
+    form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:fit-content;
+    }
+    input{
+        margin-bottom:8px;
+    }
+    button{
+        width:fit-content;
+    }
+</style>

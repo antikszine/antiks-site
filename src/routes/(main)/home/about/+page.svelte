@@ -7,13 +7,13 @@
 </script>
 
 <section class="about-page">
-	<h1>antikszine manifesto - as of 10.13.25</h1>
+	<h1><strong>antikszine manifesto</strong></h1>
 
 	{#each paragraphs as para}
 		<p>{para}</p>
 	{/each}
 
-	<h2>signed, antikszine</h2>
+	<h2>signed, <br>antikszine <br><br>10.13.25</h2>
 </section>
 
 <style>
@@ -29,6 +29,7 @@
 	h1 {
 		font-size: 2rem;
 		margin-bottom: 1.5rem;
+		font-style: oblique;
 	}
 
 	p {
@@ -41,5 +42,6 @@
 		margin-top: 2rem;
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
+		line-height: 30px;
 	}
 </style>

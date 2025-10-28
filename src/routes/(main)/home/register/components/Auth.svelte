@@ -24,7 +24,7 @@
         };
 </script>
 
-<form style="width:50%; margin:0;">
+<form>
     <input placeholder="username" type="text" bind:value={username}/>
     <br>
     <input placeholder="email" type="text" bind:value={email}/>
@@ -47,6 +47,24 @@
         <button onclick={() => {registerWithEmailAndPassword(email, password)}}>Sign Up!</button>
     {/if}
 </form>
+
+<style>
+    form{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:fit-content;
+    }
+    input{
+        margin-bottom:8px;
+    }
+    button{
+        width:fit-content;
+    }
+    p{
+        text-align:center;
+    }
+</style>
 
 <!-- 
 ###CANNOT ACCESS STORAGE UNTIL PLAN IS UPGRADED###
