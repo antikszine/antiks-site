@@ -17,10 +17,12 @@
     "do you guys like yaoi?",
     "sometimes chat forums scare me a lot more than they should.",
     "drink ur water or ill find you.",
-    "click me again, i love it when u do that"
+    "click me again, i love it when u do that",
     "have you read the jotakak horse doujinshi yet?",
     "i hope ur having a nice day :3",
-    "say thank you to lauren, mike, naomi, jess-- just go to the member's page already."
+    "say thank you to lauren, mike, naomi, jess-- just go to the member's page already.",
+    "my boss makes me feel the same way a good yaoi does.",
+    "i need to feed my cat!",
   ];
 
   let current = "welcome to antiks :3";
