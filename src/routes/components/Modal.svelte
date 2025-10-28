@@ -11,7 +11,7 @@
 {#if $showModal}
   <div class="overlay">
     <div class="dialog">
-      <p>"Discussions of identity and the depths of the internet take place here - do you still want in?”</p>
+      <p>"Do you want to join the signal?”</p>
       <div class="actions">
         <button on:click={enterSite}>YES</button>
         <button on:click={closeModal}>NO</button>
