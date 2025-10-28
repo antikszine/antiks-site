@@ -48,7 +48,6 @@
         width:40%; 
     }
     article {
-        font-family:'CourierPixel', cursive;
         font-size:small;
         margin-left:5%;
     }

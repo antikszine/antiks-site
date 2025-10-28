@@ -1,17 +1,24 @@
-<script>
+<script lang='ts'>
     import { onMount } from 'svelte';
-    /**
-     * @type {any[] | null | undefined}
-     */
-    let items = [];
+    import GridItem from './components/GridItem.svelte';
+    let items: any[] | null | undefined = [];
   
     onMount(async () => {
       const res = await fetch('/archive.json');
       items = await res.json();
     });
-  </script>
+</script>
   
-  <style>
+  <main>
+    <h1>stockpile</h1>
+    <div class="grid">
+      {#each items as it}
+          <GridItem file={it.file} thumb={it.thumb} title={it.title} date={it.date} type={it.type}></GridItem>
+      {/each}
+    </div>
+  </main>
+
+    <style>
     main { max-width: 1000px; margin: 0 auto; padding: 2rem; }
     .grid {
       display: grid;
@@ -41,19 +48,4 @@
       color: #666;
     }
   </style>
-  
-  <main>
-    <h1>stockpile</h1>
-    <div class="grid">
-      {#each items as it}
-        <a class="card" href={it.file} target="_blank" rel="noopener">
-          <img src={it.thumb} alt={it.title} loading="lazy" />
-          <div class="info">
-            <h2>{it.title}</h2>
-            <p>{new Date(it.date).toLocaleDateString()} — {it.type}</p>
-          </div>
-        </a>
-      {/each}
-    </div>
-  </main>
   
