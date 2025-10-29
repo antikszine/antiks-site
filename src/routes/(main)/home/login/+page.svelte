@@ -7,7 +7,7 @@
         <h1>welcome back</h1>
         <Auth on:signin={() => {console.log("Successfully signed in!")}}>
         </Auth>
-        <p>not immortalized in the archive? <a href="/register">add your signal.</a></p>
+        <p>not immortalized in the archive? <a href="/home/register">add your signal.</a></p>
     </div>
 </main>
 

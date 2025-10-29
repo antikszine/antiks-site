@@ -1,7 +1,7 @@
 export default [
   { name: 'Lilith', url: 'https://lilithmode.neocities.org/', occupations: ['Musician, Programmer'], type: 'Founding Member' },
   { name: 'Mike', url: 'https://mote.moe/', occupations: ['Programmer, Musician'], type: 'Founding Member' },
-  { name: 'Wen', url: 'https://wenchew.com/', occupations: ['Musician, Sound Designer, Programmer'], type: 'Founding Member' },
+  { name: 'Wen C', url: 'https://wenchew.com/', occupations: ['Musician, Sound Designer, Programmer'], type: 'Founding Member' },
   { name: 'Ant', url: 'https://www.instagram.com/antqua/', occupations: ['Artist'], type: 'Founding Member' }, 
   { name: 'Sai', url: 'https://saighandikota.carrd.co/#', occupations: ['Writer'], type: 'Founding Member' }, 
   { name: 'Yuviko', url: 'https://yuviko.neocities.org', occupations: ['Artist'], type: 'Founding Member' },
@@ -13,5 +13,13 @@ export default [
   { name: 'ARRTM', url: 'https://www.instagram.com/arrtmvrabec/', occupations: ['Musician'], type: 'Member' },
   { name: 'KVLMIV*', url: 'https://kvlmiv.crd.co/', occupations: ['Artist'], type: 'Member' },
   { name: 'tailsy', url: 'https://tailsyevergreen.carrd.co/', occupations: ['Artist, Voice Actor'], type: 'Member' },
+  { name: 'Alex Wright', url: 'https://www.instagram.com/alwrighty03/', occupations: ['Musician'], type: 'Member' },
+  { name: 'Kunimori Leo', url: 'https://kunimorileo-vo.carrd.co/', occupations: ['Artist, Voice Actor'], type: 'Member' },
+  { name: 'strnz.oh', url: 'https://www.instagram.com/strnz.oh/', occupations: ['Artist'], type: 'Member' },
+  { name: 'kYesh', url: 'https://www.instagram.com/k.yesh_/', occupations: ['Musician'], type: 'Member' },
+  { name: 'Ela Morana', url: 'https://www.elamorana.com/', occupations: ['Musician, Writer'], type: 'Member' },
+  { name: 'REDEADICA', url: 'https://www.instagram.com/redeadica/', occupations: ['Musician, Artist'], type: 'Member' },
+  { name: 'WYLDWORLD', url: 'https://www.instagram.com/wyldworld_tunes/', occupations: ['Musician'], type: 'Member' },
+  { name: 'JOYCE', url: 'https://uniform-dynamics.com/', occupations: ['Artist'], type: 'Honorary Guest' },
   { name: 'Lenval Brown', occupations: ['Voice Actor'], type: 'Honorary Guest' }
 ];
