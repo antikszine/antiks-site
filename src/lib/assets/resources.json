@@ -7,6 +7,25 @@
   {
     "name":"Freesets",
     "url":"https://freesets.dev/"
-  }
+  },
 
+  {
+    "name":"joosh's RSS Tutorial",
+    "url":"https://joosh.help/rss"
+  },
+
+  {
+    "name":"anna's archive",
+    "url":"https://annas-archive.org/"
+  },
+
+  {
+    "name":"The Odin Project",
+    "url":"https://www.theodinproject.com/"
+  },
+
+  {
+    "name":"Queer Digital History Project",
+    "url":"https://queerdigital.com/"
+  }
 ]

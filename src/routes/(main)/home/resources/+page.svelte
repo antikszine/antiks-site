@@ -1,12 +1,22 @@
-<script>
-  import resources from '$lib/assets/resources.json'; // JSON import works in SvelteKit
-</script>
-  <h1>resources & links</h1>
-<main>
+<script lang="ts">
+  import rawResources from '$lib/assets/resources.json';
 
+  // sort by name (case-insensitive)
+  const resources = [...rawResources].sort((a, b) =>
+    a.name.localeCompare(b.name, 'en', { sensitivity: 'base' })
+  );
+</script>
+
+<h1>resources & links</h1>
+
+<main>
   <ul>
     {#each resources as res}
-      <li><a href={res.url} target="_blank" rel="noopener noreferrer">{res.name}</a></li>
+      <li>
+        <a href={res.url} target="_blank" rel="noopener noreferrer">
+          {res.name}
+        </a>
+      </li>
     {/each}
   </ul>
 </main>
