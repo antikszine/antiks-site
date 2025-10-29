@@ -52,6 +52,10 @@
 				{#if c.occupations?.length}
 					<p>{c.occupations.join(' / ')}</p>
 				{/if}
+				<!--instagram is made by meta, who does not respect privacy in the same way a person's website would, so sending the privacy-conscious user there should be disclosed-->
+				{#if (c.url?.includes("instagram"))}
+					<p>instagram linked</p>
+				{/if}
 				{#if c.type}
 					<span class="tag">{c.type}</span>
 				{/if}

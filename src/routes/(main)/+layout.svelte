@@ -12,6 +12,7 @@
 	import { FirebaseApp, SignedIn, SignedOut } from 'sveltefire';
 	import { signOut } from 'firebase/auth';
     import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
 
 	let { children } = $props();
 
@@ -112,7 +113,7 @@
 					</SignedOut>
 					<SignedIn>
 						<a href="/home/profile">Profile</a>
-						<button onclick={() => signOut(auth)}>Sign Out</button>
+						<button onclick={() => {signOut(auth); goto('/home');}}>Sign Out</button>
 					</SignedIn>
 				</div>
 				{/if}
@@ -187,6 +188,11 @@
 	.sidebar a:hover,
 	.sidebar button:hover {
 		color: #ff4081;
+	}
+
+	.sidebar {
+		background-color:#FFF;
+		min-height:100vh;
 	}
 
 	.content {

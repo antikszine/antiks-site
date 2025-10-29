@@ -7,6 +7,7 @@
         <h1>welcome back</h1>
         <Auth on:signin={() => {console.log("Successfully signed in!")}}>
         </Auth>
+        <p><a href="/forgot">forgot your password?</a></p>
         <p>not immortalized in the archive? <a href="/home/register">add your signal.</a></p>
     </div>
 </main>

@@ -1,7 +1,8 @@
 <script lang="ts">
     import { auth, firestore, storage } from '$lib/firebase';
-    import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+    import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile } from 'firebase/auth';
     import { goto } from '$app/navigation';
+    import { doc, setDoc } from 'firebase/firestore';
     // import { FirebaseApp, UploadTask, DownloadURL } from 'sveltefire';
 
     let username = $state('');
@@ -12,11 +13,19 @@
 
     // let userImage: File = $state() as File;
 
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            await setDoc(doc(firestore, "user-mirror", user.uid), {
+                displayName: user.displayName
+            });
+        }
+    });
+
     const registerWithEmailAndPassword = async (email: string,password: string) => {
             try {
                 await createUserWithEmailAndPassword(auth, email, password)
                 .then((result => {return updateProfile(result.user,{displayName: username})}))
-                goto('/');
+                goto('/home');
                 console.log('Successfully created user');
             } catch (error) {
                 console.error('Registration error:', error);
