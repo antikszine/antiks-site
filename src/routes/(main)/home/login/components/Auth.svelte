@@ -11,7 +11,7 @@
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         console.log('Signed in user:', user.displayName);
-        goto('/');
+        goto('/home');
 
         } catch (error) {
             console.error('Sign in error:', error)

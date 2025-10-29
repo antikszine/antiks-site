@@ -10,7 +10,10 @@ const config = {
 	compilerOptions: {
 		dev: true,
 		enableSourcemap: true,
-		customElement: true
+		customElement: true,
+		experimental: {
+			async: true
+		}
 	},
 
 	kit: {

@@ -1,14 +1,13 @@
 <script lang="ts">
     import ForumInput from './components/ForumInput.svelte';
     import ForumListing from './components/ForumListing.svelte';
-    import { firestore } from '$lib/firebase.js';
 
-    import { collection, query, orderBy } from 'firebase/firestore';
+    import { firestore } from '$lib/firebase.js';
+    import { query, orderBy, collection } from 'firebase/firestore';
     import { collectionStore } from 'sveltefire';
 
-    const posts = collection(firestore, 'forum-posts');
+    let posts = collection(firestore, 'forum-posts');
     const q = query(posts, orderBy("date", 'desc'));
-
     const sortedPosts = collectionStore(firestore, q);
 
     function getDate(d: Date){

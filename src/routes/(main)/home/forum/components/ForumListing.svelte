@@ -1,5 +1,7 @@
 <script lang="ts">
-    import { Converter } from "showdown";
+    import showdown from "showdown";
+    const Converter = showdown.Converter;
+
     let converter = new Converter();
     let {title, username, date, post, signature} = $props();
 
