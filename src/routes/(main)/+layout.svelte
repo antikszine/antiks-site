@@ -81,7 +81,7 @@
 					<a onclick={collapseExpand} href="/home/forum">forum</a>
 					<a onclick={collapseExpand} href="/home/stockpile">stockpile</a>
 					<a onclick={collapseExpand} href="/home/resources">resources</a>
-					<a onclick={collapseExpand} href="/home/webring">webring</a>
+					<a onclick={collapseExpand} href="/home/webring">webring/members</a>
 				</nav>
 
 				<div class="auth">
@@ -102,7 +102,7 @@
 					<a href="/home/forum">forum</a>
 					<a href="/home/stockpile">stockpile (works)</a>
 					<a href="/home/resources">resources (links)</a>
-					<a href="/home/webring">webring</a>
+					<a href="/home/webring">webring & members</a>
 				</nav>
 
 				<div class="auth">
