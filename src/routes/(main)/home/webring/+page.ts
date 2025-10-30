@@ -2,11 +2,11 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async () => {
 	const webring = [
-		{
-			name: 'whereditgo.diamonds',
-			url: 'https://whereditgo.diamonds/',
-			desc: 'vault hunting and another library'
-		},
+		// {
+		// 	name: 'whereditgo.diamonds',
+		// 	url: 'https://whereditgo.diamonds/',
+		// 	desc: 'vault hunting and another library'
+		// },
 		{
 			name: 'COVALRIA',
 			url: 'https://covalria.com/',
