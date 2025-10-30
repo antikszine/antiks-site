@@ -20,6 +20,8 @@ export default [
   { name: 'Ela Morana', url: 'https://www.elamorana.com/', occupations: ['Musician, Writer'], type: 'Member' },
   { name: 'REDEADICA', url: 'https://www.instagram.com/redeadica/', occupations: ['Musician, Artist'], type: 'Member' },
   { name: 'WYLDWORLD', url: 'https://www.instagram.com/wyldworld_tunes/', occupations: ['Musician'], type: 'Member' },
+  { name: 'cako', url: "https://x.com/cakophon", occupations: ['Musician, Sound Designer'], type: 'Member' },
+  { name: 'Kapmar', url: 'https://www.instagram.com/akapmarr/', occupations: ['Musician'], type: 'Member' },
   { name: 'JOYCE', url: 'https://uniform-dynamics.com/', occupations: ['Artist'], type: 'Honorary Guest' },
   { name: 'Lenval Brown', occupations: ['Voice Actor'], type: 'Honorary Guest' }
 ];
