@@ -6,6 +6,7 @@
     let {title, username, date, post, signature} = $props();
 
     let htmlPost = converter.makeHtml(post);
+    let htmlSignature = converter.makeHtml(signature);
 </script>
 
 <section>
@@ -19,7 +20,7 @@
             <article>{@html htmlPost}</article>
             <br>
             <hr style="width:95%;">
-            <p>{@html signature}</p>
+            <p>{@html htmlSignature}</p>
         </div>
     </div>
 </section>

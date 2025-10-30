@@ -18,6 +18,7 @@
 	import constituents from './constituents';
 </script>
 
+<!--
 <section class="webring">
 	<h1>midge's webring</h1>
 
@@ -36,6 +37,7 @@
 		<button on:click={next}>next →</button>
 	</nav>
 </section>
+-->
 
 <!-- Constituents grid section -->
 <section class="constituents">
