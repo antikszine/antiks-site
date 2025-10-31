@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    export let imgSrc: string;
+    let imgSrc = $state("/src/lib/assets/minerva/LitMinerva1simplemc.png");
 
 
   onMount(() => {
@@ -26,8 +26,8 @@
     "have you guys seen my cat?",
   ];
 
-  let current = "welcome to antiks :3";
-  let show = false;
+  let current = $state("welcome to antiks :3");
+  let show = $state(false);
 
   function sayRandom() {
     const message = messages[Math.floor(Math.random() * messages.length)];

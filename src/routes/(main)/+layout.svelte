@@ -133,7 +133,7 @@
 		<main class="content">
 			{@render children?.()}
 		</main>
-		<Mascot imgSrc="/sketchyminerva1.png" />
+		<Mascot/>
 	</div>
 </FirebaseApp>
 
